@@ -1284,7 +1284,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  background-color: #f5f7f9;
   -webkit-font-smoothing: antialiased; }
 
 /********************
@@ -1330,25 +1330,15 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 85%;
+  width: 87.5%;
   margin: 0 auto; }
 
 /*********************
 LINK STYLES
 *********************/
-a, a:visited {
-  color: #f01d4f;
-  /* on hover */
-  /* on click */
-  /* mobile tap color */ }
 
-  a:link, a:visited:link {
-    /*
-    this highlights links on iPhones/iPads.
-    so it basically works like the :hover selector
-    for mobile devices.
-    */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
@@ -1369,7 +1359,7 @@ h1, .h1 {
   line-height: 1.333em; }
 
 h2, .h2 {
-  font-size: 1.75em;
+
   line-height: 1.4em;
   margin-bottom: 0.375em; }
 
@@ -1385,7 +1375,9 @@ h5, .h5 {
   line-height: 2.09em;
   text-transform: uppercase;
   letter-spacing: 2px; }
-
+h1, h2, h3, h4, h5, h6 {
+  color:#212325;
+}
 /*********************
 HEADER STYLES
 *********************/
@@ -1404,6 +1396,7 @@ HEADER STYLES
   position: fixed;
   top:0;
   width:100%;
+  z-index:999;
 }
 
 .nav-up {
@@ -1471,19 +1464,16 @@ POSTS & CONTENT STYLES
 #content {
   margin-top: 1.5em; }
 
+
 .hentry {
   background-color: white;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #cccccc; }
+  margin-bottom: 25px;
+  border: 1px solid #ecedf2;
+height:400px;}
   .hentry header {
-    border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
-  .hentry footer {
-    padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
-    .hentry footer p {
-      margin: 0; }
+    color:#212325;
+  }
 
 /* end .hentry */
 .single-title,
@@ -1501,10 +1491,7 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-.byline {
-  color: #9fa6b4;
-  font-style: italic;
-  margin: 0; }
+
 
 /* entry content */
 .entry-content {
@@ -2419,7 +2406,7 @@ be set to display none.
 }
 
 .overlay {
-  padding:75px 0;
+  padding:60px 0;
   background-color:rgba(0,0,0,.7);
 
 }
@@ -2469,9 +2456,11 @@ button:hover {
 }
 .sign-up-box {
   background:#FFF;
-  padding:50px 0;
   text-align:center;
   border-top:7px solid #2fca74;
+}
+section {
+  padding: 60px 0;
 }
 
 .sign-up-box .main-text {
@@ -2492,5 +2481,124 @@ button:hover {
   margin-top:10px;
   width:50%;
 }
+.col {
+  height:511px;
+}
+
+.home article, .col {
+  -webkit-transition-property:background,border-color,color,opacity,box-shadow,-webkit-transform;
+  transition-property:background,border-color,color,opacity,box-shadow,-webkit-transform;
+  -webkit-transition-duration:.3s;
+  transition-duration:.3s;
+  -webkit-transition-timing-function:ease-in-out;
+  transition-timing-function:ease-in-out;
+  border-radius:3px;
+  margin-bottom:25px;
+  width:350px;
+  max-width:350px;
+  background:#FFF;
+
+}
+.col:hover, .home article:hover {
+  box-shadow:0 15px 45px -5px rgba(10,16,34,.3);
+  cursor:pointer;
+}
+
+.section-title {
+  color:#212325;
+  text-align:center;
+  margin-top:0;
+  margin-bottom:25px;
+}
+.row {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  flex-direction: row;
+}
+.home .img-wrap {
+  height:50%;
+
+}
+.home .img-wrap img {
+  width:100%;
+  height:100%;
 
 
+}
+
+.art .category h6 {
+  color:#959faa;
+  margin:0;
+}
+.art .title h2 {
+  font-size: 24px;
+  margin-top:5px;
+  margin-bottom:-10px;
+  font-weight:500;
+}
+
+.art .excerpt {
+  font-size:16px;
+  margin-bottom:0;
+}
+
+.read-more p {
+  color:#2fca74;
+  font-size:14px;
+  margin:0;
+}
+.read-more {
+  margin-top:-5px;
+  position:absolute;
+  bottom:0;
+  margin-bottom:25px;
+}
+.art {
+  height:100%;
+  position:relative;
+}
+.home .transcript {
+  padding:25px;
+  height:50%;
+}
+.arrow {
+  position:relative;
+  top:1px;
+}
+.home #content {
+  margin-top:0;
+  background:#FFF;
+}
+.home article {
+  position:relative;
+  margin:0 auto;
+  margin-bottom:25px;
+}
+.home .entry-title a {
+  color:#212325;
+
+}
+.home .entry-title {
+  margin-bottom:10px;
+  font-size:20px;
+  font-weight:400;
+
+}
+.home .byline {
+  font-family:'Hind Madurai', 'Helvetica Neue', sans-serif;
+  color:#999;
+  margin:0;
+}
+.home .footer-category a {
+  color:#2fca74;
+  text-decoration:none;
+}
+.read-more a {
+  text-decoration:none;
+  color:#2fca74;
+}
+.email-form input {
+  margin:0 auto;
+  margin-bottom:13px;
+}
