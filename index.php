@@ -197,9 +197,14 @@
                 <div class="banner-holder">
                     <div class="overlay">
                         <div class="banner wrap">
-                            <h2>Do&nbsp;you want&nbsp;to&nbsp;earn extra&nbsp;income blogging?</h2>
-                            <p class="text">We've put together a <b>FREE&nbsp;7&#8209;day&nbsp;course</b> that will guide you step by step on how to become a professional blogger.</p>
-                            <button>Get Started</button>
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Interested in&nbsp;earning extra&nbsp;money by&nbsp;blogging?</h2>
+                                    <p class="text">We've put together a <b>FREE&nbsp;7&#8209;day&nbsp;course</b> that will<br>guide you step by step on how to<br>become a professional&nbsp;blogger.</p>
+                                    <button>Get Started</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -288,7 +293,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="end-section-button">View All Courses &amp; Guides</button>
+                    <div class="btn-wrap"><button class="end-section-button">View All Courses &amp; Guides</button></div>
                 </div>
             </section>
             <section class="youtube-section">
@@ -297,7 +302,7 @@
                     <div class="youtube-wrap">
                         <iframe width="100%" height="184.57" src="https://www.youtube.com/embed/tQy3fTwF-u0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <button class="end-section-button"><i class="fa fa-youtube" aria-hidden="true"></i>
+                  <button class="end-section-button"><i class="fa fa-youtube" aria-hidden="true"></i>
                         Find us on YouTube</button>
 
                 </div>
