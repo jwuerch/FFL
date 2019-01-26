@@ -85,7 +85,9 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+
+}
 
 /* ==========================================================================
    Links
@@ -1063,7 +1065,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none; }
 
 h1, .h1 {
-  font-size: 2.5em;
   line-height: 1.333em;
   font-weight:900;}
 
@@ -2079,6 +2080,7 @@ be set to display none.
   display:flex;
   justify-content:space-between;
   align-items:center;
+  height:100%;
 }
 #main, #header {
   transition: margin-left .5s;
@@ -2093,6 +2095,7 @@ be set to display none.
 }
 
 .overlay {
+  padding:30px 0;
   background-color:rgba(0,0,0,.6);
   display:flex;
   align-items:center;
@@ -2422,13 +2425,22 @@ h1, h2, h3, h4, h5, h6 {
 .featured-article-section h1 {
   color:#FFF;
   margin-top:0;
+  font-size:32px;
 }
 
 .featured-article-section .col {
   max-width:505px;
 }
-.featured-article-section {
-  height:70vh;
+#logo img {
+  width:85%;
+}
+@media only screen and (min-width:400px) {
+  .featured-article-section h1 {
+    font-size:2.5em;
+  }
+  #logo img {
+    width:100%;
+  }
 }
 
 @media only screen and (min-width:768px) {
@@ -2455,6 +2467,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #container {
   padding-top:80px;
+
 }
 @media only screen and (min-width:960px) {
 
