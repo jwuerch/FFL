@@ -1040,7 +1040,7 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 87.5%;
+  width: 95%;
   margin: 0 auto; }
 
 /*********************
@@ -1115,14 +1115,15 @@ HEADER STYLES
 #logo {
   margin: 0.40em 0;
   float:left;
-  top:3px;
   position:relative;
-  margin-right:30px;
-width:100%;}
+  width:65%;
+}
   #logo a {
     color: white;}
     #logo a img {
-      max-width:255px; 
+      max-width:255px;
+      top:2px;
+      position:relative;
     }
 
 /*********************
@@ -1141,14 +1142,6 @@ and more scalable.
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav li {
-    /*
-    so you really have to rethink your dropdowns for mobile.
-    you don't want to have it expand too much because the
-    screen is so small. How you manage your menu should
-    depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
-    */ }
 
     .nav li a {
       display: block;
@@ -1539,26 +1532,9 @@ tweeners.
   them in here, they won't work.
   */
   /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
 
-  /* end .menu */
+
+
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -1595,32 +1571,6 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
 
-#inner-header > nav {
-  display:none;
-}
-@media only screen and (min-width: 960px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  Here's where you can start getting into the good stuff.
-  This size will work on iPads, other tablets, and desktops.
-  So you can start working with more styles, background images,
-  and other resources. You'll also notice the grid starts to
-  come into play. Have fun!
-  
-  ******************************************************************/
-  /*********************
-  GENERAL STYLES
-  *********************/
-  /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  #inner-header > nav {
-  display:block;
-}
 
 
 
@@ -1646,6 +1596,7 @@ you can add resource intensive styles.
       float: left;
       position: relative;
       line-height:85px;
+      height:100%;
       /*
       plan your menus and drop-downs wisely.
       */
@@ -1657,6 +1608,7 @@ you can add resource intensive styles.
         font-weight:500;
         transition-duration:.5s;
         transition-property: background,border-color,color,line-height;
+        height:100%;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
@@ -1678,7 +1630,7 @@ you can add resource intensive styles.
         border-radius:3px;
         box-shadow:0 6px 20px rgba(0, 0, 0, 0.08);
         z-index: 8999;
-        visibility:0;
+        visibility:hidden;
         opacity:0;
        transition: opacity 0.2s linear, visibility 0.2s linear;
         /* highlight sub-menu current page */ }
@@ -1779,7 +1731,7 @@ you can add resource intensive styles.
     the footer.
     */ }
 
-  /* end .footer-links */ }
+
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -1982,7 +1934,7 @@ be set to display none.
 }
 
 
-.sidenav li:last-child, .nav li:last-child a {
+.sidenav li:last-child, #top-nav > ul > li:last-child a {
   color:#2fca74;
 }
 .sidenav li:last-child, .nav li:last-child:hover a {
@@ -2195,6 +2147,9 @@ section {
   flex-direction: row;
   align-items:center;
 }
+.featured-article-section .row {
+  justify-content:flex-start;
+}
 .home .img-wrap {
   height:50%;
 
@@ -2290,11 +2245,14 @@ li.menu-item-has-children.menu-item > a:after {
   content:'\f107';
   font-family: FontAwesome;
   margin-top:2px;
-  font-size:18px;
   position:relative;
   font-weight:700;
   font-size:18px;
   top:1px;
+}
+#top-nav li.menu-item-has-children.menu-item > a:after {
+  font-size:16px;
+  margin-left:.3rem;
 }
 li.menu-item-has-children.menu-item > a:before {
   margin-left:.5rem;
@@ -2432,15 +2390,111 @@ h1, h2, h3, h4, h5, h6 {
   max-width:505px;
 }
 #logo img {
-  width:85%;
+  width:100%;
 }
+
+#container {
+  padding-top:80px;
+
+}
+.wrap {
+  max-width:1200px;
+}
+
+#top-nav {
+  display:none;
+  float:right;
+  height:100%;
+}
+#top-nav > ul {
+  height:100%;
+  float:left;
+}
+.search-wrap {
+  float:right;
+  height:100%;
+  position:relative;
+  display:flex;
+  align-items:center;
+  top:2px;
+}
+
+.search-icon {
+  position:relative;
+  z-index:60;
+}
+.hidden {
+  display:none !important;
+}
+.search-icon:hover {
+  cursor:pointer;
+}
+.search-wrap input {
+  margin-bottom:0;
+}
+.search-wrap .input-wrap {
+  display:flex;
+  align-items:center;
+}
+
+.search-wrap form input {
+  border-radius:9999px;
+}
+.popup {
+  width:0;
+  position:absolute;
+  right:25px;
+
+}
+
+
+.popup.non-active input {
+  padding:0;
+  border:0;
+}
+#top-nav .fa-times {
+  font-size:19px;
+  position:relative;
+}
+
+#top-nav i:hover {
+  cursor:pointer;
+}
+#logo {
+  order:2;
+}
+.search-wrap {
+  order:3;
+
+}
+.hamburger-wrap {
+  order:1;
+}
+
 @media only screen and (min-width:400px) {
   .featured-article-section h1 {
     font-size:2.5em;
   }
-  #logo img {
-    width:100%;
+  #logo {
+    width:auto;
   }
+
+
+}
+@media only screen and (min-width:525px) {
+  .featured-article-section {
+    height:50vh;
+  }
+}
+@media only screen and (min-width:600px) {
+  .wrap {
+    width:87.5%;
+  }
+  .featured-article-section .row {
+    justify-content:center;
+  }
+
+
 }
 
 @media only screen and (min-width:768px) {
@@ -2457,6 +2511,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap:nowrap;
     justify-content:space-between;
   }
+  .featured-article-section .row {
+    justify-content:space-between;
+  }
   .featured-article-section {
     height:80vh;
   }
@@ -2465,11 +2522,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#container {
-  padding-top:80px;
 
-}
 @media only screen and (min-width:960px) {
+  #logo {
+    order:inherit;
+  }
+  .search-wrap {
+    order:inherit;
+
+  }
+  .hamburger-wrap {
+    order:inherit;
+  }
 
   .featured-article-section .email-sign-up {
     padding:50px;
@@ -2477,12 +2541,53 @@ h1, h2, h3, h4, h5, h6 {
   .wrap {
     width:94.5%;
   }
+  #hamburger-wrap {
+    display:none;
+  }
+  #top-nav {
+    display:initial;
+  }
+  #inner-header > .col {
+    display:flex;
+    height:100%;
+  }
+  #logo {
+    float:left;
+    width:auto;
+    margin:0 30px 0 0;
+    height:100%;
+
+  }
+  #logo a img {
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  #top-nav > ul > li > a {
+    padding:0 8px;
+  }
+
 
 }
-.wrap {
-  max-width:1200px;
+@media only screen and (min-width:1000px) {
+  #top-nav > ul > li > a {
+    padding:0 11px;
+  }
 }
+@media only screen and (min-width:1030px) {
+  #top-nav > ul > li > a {
+    padding:0 13px;
+  }
+}
+@media only screen and (min-width:1075px) {
+  #top-nav > ul > li > a {
+    padding:0 15px;
+  }
+}
+
 @media only screen and (min-width:1150px) {
 
 }
+
 

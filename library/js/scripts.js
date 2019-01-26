@@ -114,6 +114,23 @@ jQuery(document).ready(function($) {
      * Let's fire off the gravatar function
      * You can remove this if you don't need it
      */
+
+    $('.search-wrap i').on('click', function() {
+        if ($('.popup').hasClass('non-active')) {
+            $('.search-wrap .fa-search').addClass('hidden');
+            $('.search-wrap .fa-times').removeClass('hidden');
+            $('.popup').css('width', '285px').removeClass('non-active').addClass('active').css('transition', '.3s');
+        } else {
+            $('.popup').css('width', '0').removeClass('active').addClass('non-active').css('transition', '.3s');
+            $('.search-wrap .fa-search').removeClass('hidden');
+            $('.search-wrap .fa-times').addClass('hidden');
+
+
+        }
+
+        
+    });
+
     loadGravatars();
     $('.sidenav li.menu-item-has-children').find('.sub-menu').css('display', 'none');
     $('.sidenav li.menu-item-has-children.menu-item-6').addClass('active').find('.sub-menu').css('display', 'block');

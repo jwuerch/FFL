@@ -58,7 +58,7 @@
 			<div class="wrap col">
 
 			<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-			<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="Frugal For Less Logo" src="http://jasonwuerch.com/wp-content/uploads/2019/01/Frugal-For-Less-Logo.png"></a></p>
+			<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="Frugal For Less Logo" src="http://localhost:8888/wp-content/uploads/2019/01/ffl-logo.png"></a></p>
 			<div id="hamburger-wrap">
 				<span onclick="openNav()">
 					<div class="hamburger">&#9776;</div>
@@ -69,12 +69,12 @@
 			<?php // bloginfo('description'); ?>
 
 
-			<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<nav id="top-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu(array(
 					'container' => false,                           // remove nav container
 					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-					'menu_class' => 'nav top-nav cf',               // adding custom nav class
+					'menu_class' => 'nav main-nav cf',               // adding custom nav class
 					'theme_location' => 'main-nav',                 // where it's located in the theme
 					'before' => '',                                 // before the menu
 					'after' => '',                                  // after the menu
@@ -85,6 +85,19 @@
 				)); ?>
 
 			</nav>
+				<div class="search-wrap">
+					<div class="search-icon">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<i class="fa fa-times hidden" aria-hidden="true"></i>
+					</div>
+					<div class="popup non-active">
+						<form class="contract" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+							<div class="input-wrap">
+								<input type="text" value="" name="s" id="s" placeholder="Search this site" />
+							</div>
+						</form>
+					</div>
+				</div>
 
 
 		</div>

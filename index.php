@@ -7,13 +7,13 @@
                                     <div class="row">
                                         <div class="col-1 col">
                                             <div class="sub-title">+ Featured Article</div>
-                                            <h1 class="title">25+ Best Survey Sites To Earn $600/Month or&nbsp;More</h1>
+                                            <h1 class="title">25+ Best Survey Sites To&nbsp;Earn $600/Month or&nbsp;More</h1>
                                             <p class="text">A list of 25 legitimate online survey sites to help you make extra money from home. All of these sites are 100%&nbsp;free.</p>
                                             <button class="featured-article-button">Read Now</button>
                                         </div>
                                         <div class="col-2 col">
                                             <div class="email-sign-up">
-                                                <h2 class="main-text">Want to learn about even more ways to make&nbsp;extra&nbsp;money?</h2>
+                                                <h2 class="main-text">Want to learn about even more ways to earn&nbsp;extra&nbsp;money?</h2>
                                                 <div class="small-text">Join our mailing list to get access to exclusive articles, courses and money&nbsp;making&nbsp;tips.</div>
                                                 <form class="email-form">
                                                     <input type="text" placeholder="First Name">
