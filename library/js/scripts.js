@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 
         }
 
-        
+
     });
 
     loadGravatars();
@@ -139,11 +139,11 @@ jQuery(document).ready(function($) {
 
 
         if ($(this).hasClass('active')) {
-            $(this).removeClass('active').find(".sub-menu").slideUp(300, 'swing', function() {
+            $(this).removeClass('active').find(".sub-menu").fadeOut(300, 'swing', function() {
 
             });
         } else {
-            $(this).addClass('active').find(".sub-menu").slideDown(300, 'swing', function() {
+            $(this).addClass('active').find(".sub-menu").fadeIn(300, 'swing', function() {
 
             });
         };
@@ -184,11 +184,11 @@ jQuery(document).ready(function($) {
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight){
             // Scroll Down
-            $('#header-wrap').removeClass('nav-down').addClass('nav-up').css('.transition', '.3s');
+            $('#header-wrap').fadeOut(300);
         } else {
             // Scroll Up
             if(st + $(window).height() < $(document).height()) {
-                $('#header-wrap').removeClass('nav-up').addClass('nav-down').css('transition', '.3s');
+                $('#header-wrap').fadeIn(300);
             }
         }
 
