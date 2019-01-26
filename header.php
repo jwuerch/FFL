@@ -7,6 +7,8 @@
 
 <head>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
 
 	<?php // force Internet Explorer to use the latest rendering engine available ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +55,7 @@
 
 
 		<div id="inner-header" class="cf">
-			<div class="wrap">
+			<div class="wrap col">
 
 			<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 			<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="Frugal For Less Logo" src="http://jasonwuerch.com/wp-content/uploads/2019/01/Frugal-For-Less-Logo.png"></a></p>

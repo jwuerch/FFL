@@ -1,42 +1,52 @@
 <?php get_header(); ?>
-			<div class="banner-holder">
-				<div class="overlay">
-					<div class="banner wrap">
-						<div class="col-1">
-							<div class="featured-article-text">+ Featured Article</div>
-							<h1 class="featured-article-title">Earn $600+/Month Taking Online Surveys</h1>
-							<p class="featured-article-excerpt">We break down the best 25 survey sites and examine how much they pay, how long they take and if they are really&nbsp;worth&nbsp;it.</p>
-							<button class="featured-article-button">Read Now</button>
-						</div>
-						<div class="col-2">
-							<div class="sign-up-box">
-								<h2 class="main-text">Want to learn about even more ways to earn&nbsp;extra&nbsp;money?</h2>
-								<div class="small-text">Join our mailing list to get access to exclusive articles, courses and money&nbsp;making&nbsp;tips.</div>
-								<form class="email-form">
-									<input type="text" placeholder="First Name">
-									<input type="text" placeholder="Email Address">
-									<button>Subscribe</button>
-								</form>
+                <section class="featured-article-section">
+                    <div class="banner-holder">
+                        <div class="overlay">
+                            <div class="wrap">
+                                <div class="banner">
+                                    <div class="row">
+                                        <div class="col-1 col">
+                                            <div class="sub-title">+ Featured Article</div>
+                                            <h1 class="title">25+ Best Survey Sites To Earn $600/Month or&nbsp;More</h1>
+                                            <p class="text">A list of 25 legitimate online survey sites to help you make extra money from home. All of these sites are 100%&nbsp;free.</p>
+                                            <button class="featured-article-button">Read Now</button>
+                                        </div>
+                                        <div class="col-2 col">
+                                            <div class="email-sign-up">
+                                                <h2 class="main-text">Want to learn about even more ways to make&nbsp;extra&nbsp;money?</h2>
+                                                <div class="small-text">Join our mailing list to get access to exclusive articles, courses and money&nbsp;making&nbsp;tips.</div>
+                                                <form class="email-form">
+                                                    <input type="text" placeholder="First Name">
+                                                    <input type="text" placeholder="Email Address">
+                                                    <button>Subscribe</button>
+                                                </form>
 
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<section class="sign-up-box">
-				<div class="wrap">
-					<h2 class="main-text">Want to learn about even more ways to earn extra&nbsp;money?</h2>
-					<div class="small-text">Join our mailing list to get access to exclusive articles, courses and money&nbsp;making&nbsp;tips.</div>
-					<form class="email-form">
-						<input type="text" placeholder="First Name">
-						<input type="text" placeholder="Email Address">
-						<button>Subscribe</button>
-					</form>
-				</div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-			</section>
-			<div class="feature-box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            <section class="email-sign-up-section">
+                <div class="email-sign-up">
+                    <div class="wrap">
+                        <h2 class="main-text">Want to learn about even more ways to earn extra&nbsp;money?</h2>
+                        <div class="small-text">Join our mailing list to get access to exclusive articles, courses and money&nbsp;making&nbsp;tips.</div>
+                        <form class="email-form">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Email Address">
+                            <button>Subscribe</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+
+    <div class="feature-box">
 				<div class="wrap">
 
 				</div>
