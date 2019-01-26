@@ -119,16 +119,6 @@ jQuery(document).ready(function($) {
     $('.sidenav li.menu-item-has-children.menu-item-6').addClass('active').find('.sub-menu').css('display', 'block');
     $('.sidenav li.menu-item-has-children').on('click', function() {
 
-        $('.sidenav li.menu-item-has-children').each(function() {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active').find('.sub-menu').slideUp('fast', function() {
-
-                })
-            }
-
-
-
-        });
 
 
         if ($(this).hasClass('active')) {

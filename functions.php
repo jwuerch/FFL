@@ -249,6 +249,18 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
+// Changing excerpt length
+function new_excerpt_length($length) {
+    return 25;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+// Changing excerpt more
+function new_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
 
 

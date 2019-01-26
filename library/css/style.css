@@ -94,11 +94,16 @@ body {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent; }
+  background: transparent;
+color:#2fca74;
+text-decoration:none;}
 
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+a:hover {
+  cursor:pointer;
+}
 a:focus {
   outline: thin dotted; }
 
@@ -107,7 +112,8 @@ a:focus {
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+}
 
 /* ==========================================================================
    Typography
@@ -322,6 +328,7 @@ button {
   border-radius:3px;
   padding:13px 30px;
   font-size:16px;
+  letter-spacing:.5px;
 }
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -1283,7 +1290,7 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #212325;
   background-color: #f5f7f9;
   -webkit-font-smoothing: antialiased; }
 
@@ -1396,7 +1403,7 @@ HEADER STYLES
   position: fixed;
   top:0;
   width:100%;
-  z-index:999;
+  z-index:500;
 }
 
 .nav-up {
@@ -1470,11 +1477,16 @@ POSTS & CONTENT STYLES
   border-radius: 3px;
   margin-bottom: 25px;
   border: 1px solid #ecedf2;
-height:400px;}
+  max-height:425px;
+  min-height:335px;
+  height:auto;
+}
   .hentry header {
     color:#212325;
   }
-
+  .hentry .img-wrap {
+    display:none;
+  }
 /* end .hentry */
 .single-title,
 .page-title,
@@ -2018,23 +2030,6 @@ you can add resource intensive styles.
         top: auto;
         visibility: visible; }
 
-        li.menu-item-has-children.menu-item > a:after, .sidenav li.menu-item-has-children > a:after {
-          margin-left:.5rem;
-          content:"";
-          font-size:inherit;
-          font-weight:400;
-          font-variant:normal;
-          font-transform:none;
-          line-height:inherit;
-          display:inline-block;
-          position:relative;
-          width: 0; 
-          height: 0; 
-          border-left: 4px solid transparent;
-          border-right: 4px solid transparent;
-           border-top: 4px solid;
-           top:-2.75px;
-        }
 
   /* end .nav */
   /*********************
@@ -2261,6 +2256,7 @@ be set to display none.
   background-color:#FFF;
   border-right:1px solid #ecedf2;
   box-shadow:none;
+  z-index:600;
 
 }
 
@@ -2416,8 +2412,12 @@ be set to display none.
 
 }
 .featured-article-text, .featured-article-excerpt, .featured-article-button, .featured-article-title {
-  margin-bottom:20px;
+  margin-bottom:25px;
   color:#FFF;
+}
+.featured-article-title {
+  font-size:34px;
+  line-height:42px;
 }
 .featured-article-button {
   margin-bottom:5px;
@@ -2467,7 +2467,8 @@ section {
   color:#212325;
   margin:0;
   margin-bottom:15px;
-  line-height:30px;
+  line-height:36px;
+  font-size:28px;
 }
 .sign-up-box .small-text {
   color:#212325;
@@ -2481,8 +2482,9 @@ section {
   margin-top:10px;
   width:50%;
 }
-.col {
-  height:511px;
+.most-popular .col {
+  min-height:555px;
+  max-height:600px;
 }
 
 .home article, .col {
@@ -2494,8 +2496,7 @@ section {
   transition-timing-function:ease-in-out;
   border-radius:3px;
   margin-bottom:25px;
-  width:350px;
-  max-width:350px;
+  max-width:450px;
   background:#FFF;
 
 }
@@ -2509,6 +2510,7 @@ section {
   text-align:center;
   margin-top:0;
   margin-bottom:25px;
+  font-size:28px;
 }
 .row {
   display:flex;
@@ -2532,7 +2534,7 @@ section {
   margin:0;
 }
 .art .title h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-top:5px;
   margin-bottom:-10px;
   font-weight:500;
@@ -2555,8 +2557,8 @@ section {
   margin-bottom:25px;
 }
 .art {
-  height:100%;
   position:relative;
+  height:100%;
 }
 .home .transcript {
   padding:25px;
@@ -2581,8 +2583,8 @@ section {
 }
 .home .entry-title {
   margin-bottom:10px;
-  font-size:20px;
-  font-weight:400;
+  font-size:22px;
+  font-weight:500;
 
 }
 .home .byline {
@@ -2601,4 +2603,132 @@ section {
 .email-form input {
   margin:0 auto;
   margin-bottom:13px;
+}
+
+
+
+li.menu-item-has-children.menu-item > a:after {
+  margin-left:.5rem;
+  content:'\f107';
+  font-family: FontAwesome;
+  margin-top:2px;
+  font-size:18px;
+  position:relative;
+  font-weight:700;
+  font-size:18px;
+  top:1px;
+}
+li.menu-item-has-children.menu-item > a:before {
+  margin-left:.5rem;
+  content:'\f107';
+  font-family: FontAwesome;
+  margin-top:2px;
+  font-size:18px;
+  position:relative;
+  font-weight:700;
+  font-size:18px;
+  position:absolute;
+  left:23%;
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display:none;
+
+
+}
+
+.excerpt-read-more {
+  display:none;
+}
+.blogging-section .banner-holder {
+  border-top:7px solid #2fca74;
+}
+.blogging-section {
+  padding:0;
+}
+
+.blogging-section h2 {
+  font-size: 54px;
+  color:#FFF;
+  line-height:62px;
+  margin:0;
+  font-weight:700;
+}
+.blogging-section .text {
+  font-size:18px;
+  color:#FFF;
+}
+.blogging-section p, .blogging-section .text, .blogging-section h2 {
+  margin-bottom:25px;
+  padding-right:25px;
+
+}
+
+.blogging-section .banner-holder {
+  margin-top:0;
+}
+.end-section-button {
+  width:100%;
+}
+.courses-guides-section {
+  text-align:center;
+}
+.color-green {
+  color:#2fca74;
+}
+.feature-icon i {
+  font-size:40px;
+  margin-top:22px;
+  margin-bottom:34px;
+}
+
+.courses-guides-section .col {
+  width:100%;
+  border:1px solid #ecedf2;
+  padding:25px;
+}
+
+.quick-money-section .text {
+  text-align:center;
+}
+.quick-money-section .col {
+  padding:25px;
+  border: 1px solid #ecedf2
+}
+.quick-money-section .col:hover {
+  box-shadow:none;
+}
+.quick-money-section .row {
+  display:flex;
+  justify-content:space-between;
+  flex-direction:column;
+}
+.quick-money-section h3 {
+  text-align:center;
+  font-size:24px;
+}
+.quick-money-section ul {
+  padding-left:20px;
+  list-style-type:disc;
+}
+.quick-money-section li {
+  padding:5px 0;
+  font-size:18px;
+  text-align:left;
+  font-weight:700;
+}
+.youtube-section {
+  background:#FFF;
+}
+.youtube-section button {
+  background:#FF0000;
+}
+.youtube-section button i {
+  font-size:24px;
+  margin-right:5px;
+}
+.youtube-wrap {
+  text-align:center;
+  margin-bottom:25px;
 }
