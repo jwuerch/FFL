@@ -132,18 +132,21 @@ jQuery(document).ready(function($) {
     });
 
     loadGravatars();
-    $('.sidenav li.menu-item-has-children').find('.sub-menu').css('display', 'none');
-    $('.sidenav li.menu-item-has-children.menu-item-6').addClass('active').find('.sub-menu').css('display', 'block');
-    $('.sidenav li.menu-item-has-children').on('click', function() {
+    $('#side-nav li.menu-item-has-children').find('.sub-menu').css('display', 'none');
+    $('#side-nav li.menu-item-has-children.menu-item-6').addClass('active').find('.sub-menu').css('display', 'block');
+    $('#side-nav li.menu-item-has-children').on('click', function() {
 
 
 
         if ($(this).hasClass('active')) {
-            $(this).removeClass('active').find(".sub-menu").fadeOut(300, 'swing', function() {
+            $(this).removeClass('active').find(".sub-menu").slideUp(100, function() {
 
             });
         } else {
-            $(this).addClass('active').find(".sub-menu").fadeIn(300, 'swing', function() {
+            $('#side-nav li.menu-item-has-children').removeClass('active').find('.sub-menu').slideUp(100, function() {
+
+            });
+            $(this).addClass('active').find(".sub-menu").slideDown(100, function() {
 
             });
         };
@@ -198,26 +201,31 @@ jQuery(document).ready(function($) {
 
 
 
+
 }); /* end of as page load scripts */
 
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
     document.getElementById("mySidenav").style.width = "350px";
-    document.getElementById("main").style.marginLeft = "350px";
-    document.getElementById("header").style.marginLeft = "350px";
-    document.getElementById("side-nav").style.left = '0';
-    document.getElementById("hamburger-wrap").style.left = "400px";
+    document.getElementById("mySidenav").style.left = '0px';
+    document.getElementById("side-nav").style.left = '0px';
+
+    // document.getElementById("header").style.marginLeft = "350px";
+    // document.getElementById("featured-article-section").style.marginLeft = "350px";
+    // document.getElementById("hamburger-wrap").style.left = "400px";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("header").style.marginLeft = "0";
-    document.getElementById("side-nav").style.left = "-350px";
-    document.getElementById("hamburger-wrap").style.marginLeft = "0px";
-    document.getElementById("hamburger-wrap").style.left = "0px";
+    document.getElementById("mySidenav").style.left = "-350px";
+    document.getElementById("side-nav").style.left = '350px';
+
+    // document.getElementById("featured-article-section").style.marginLeft = "0";
+    // document.getElementById("header").style.marginLeft = "0";
+    // document.getElementById("hamburger-wrap").style.marginLeft = "0px";
+    // document.getElementById("hamburger-wrap").style.left = "0px";
 
 
 

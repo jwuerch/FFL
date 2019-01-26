@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-                <section class="featured-article-section">
+                <section id="featured-article-section" class="featured-article-section">
                     <div class="banner-holder">
                         <div class="overlay">
                             <div class="wrap">
@@ -120,7 +120,7 @@
 				</div>
 			</section>
 
-			<section id="content">
+			<section id="content" class="recent-articles-section">
 
 				<div id="inner-content" class="wrap cf">
 
@@ -155,7 +155,6 @@
                        								'<span class="by">'.__( 'in', 'bonestheme').'</span>'
                     							); ?></span><?php printf( '<span class="entry-category category desktop-category">' . __('', 'bonestheme' ) . ' %1$s</span>' , get_the_category_list(', ') ); ?></div>
 
-                                    <div class="read-more"><p><a href="<?php the_permalink() ?>">Read More <span class="arrow">→</span></a></p></div>
 
 
 
@@ -186,7 +185,7 @@
 
 							<?php endif; ?>
 
-                        <button class="end-section-button">Go to Latest Posts</button>
+                        <button class="end-section-button">More Posts</button>
 						</main>
 
 

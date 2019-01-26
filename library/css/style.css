@@ -1126,55 +1126,21 @@ HEADER STYLES
       position:relative;
     }
 
-/*********************
-NAVIGATION STYLES
-*********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-.nav {
-  border-bottom: 0;
-  margin: 0;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */ }
 
-    .nav li a {
-      display: block;
-      color: #959faa;
-      text-decoration: none;
-      padding: 0.75em;
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */ }
 
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      padding-left: 30px; }
-
-/* end .nav */
-/*********************
-POSTS & CONTENT STYLES
-*********************/
-#content {
-  margin-top: 1.5em; }
+.recent-articles-section {
+  background:#FFF;
+}
 
 
 .hentry {
   margin-bottom: 3px;
-  padding:15px 5px;
-  background:#FFF;
+  padding:15px 15px;
   display:flex;
+  background:#f5f7f9;
 }
 .hentry .img-wrap {
-  padding:0 15px;
+  padding-right:15px;
 }
 .mobile-category {
   line-height:15px;
@@ -1187,7 +1153,11 @@ POSTS & CONTENT STYLES
 .hentry .byline {
   font-size:12px;
   text-transform:uppercase;
+  font-weight:500;
+  color:#999;
 }
+
+
 .hentry .img-wrap img {
   width:160px;
   height:117px;
@@ -1605,114 +1575,98 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  nav {
-      float:right;
 
+.nav {
+  margin: 0;
+  float:right;
+  border:0;
+}
+
+.nav ul {
+  background: #FFF;
+  margin-top: 0;
+}
+.nav li {
+  float: left;
+  position: relative;
+  line-height:85px;
+  height:100%;
+}
+.nav li a {
+  border-bottom: 0;
+  padding:0 15px;
+  font-size:14px;
+  font-weight:500;
+  transition-duration:.5s;
+  transition-property: background,border-color,color,line-height;
+  height:100%;
+}
+
+.nav li a:hover, .nav li:hover a {
+  transition-duration:.5s;
+  transition-property: background,border-color,color,line-height;
+}
+
+
+#top-nav li a {
+  display: block;
+  color: #959faa;
+  text-decoration: none;
+}
+
+#top-nav ul.sub-menu li a {
+  border-left:3px solid #FFF;
+}
+#top-nav ul.sub-menu li:hover a {
+  border-left: 3px solid rgb(118, 147, 244);
+
+}
+.side-nav li ul.sub-menu li a {
+  padding-left: 30px
+}
+
+#top-nav li ul.sub-menu,
+#top-nav li ul.children {
+  margin-top: 0;
+  border-top: 0;
+  position: absolute;
+  visibility: hidden;
+  border-radius: 3px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  z-index: 8999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+#top-nav li:hover ul.sub-menu, #top-nav li:hover ul.children {
+    visibility: visible;
+    opacity: 1;
   }
-  .nav {
-    border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav ul {
-      background: #FFF;
-      margin-top: 0; }
-    .nav li {
-      float: left;
-      position: relative;
-      line-height:85px;
-      height:100%;
-      /*
-      plan your menus and drop-downs wisely.
-      */
-      /* showing sub-menus */ }
-      .nav li a {
-        border-bottom: 0;
-        padding:0 15px;
-        font-size:14px;
-        font-weight:500;
-        transition-duration:.5s;
-        transition-property: background,border-color,color,line-height;
-        height:100%;
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover {
-          transition-duration:.5s;
-        transition-property: background,border-color,color,line-height;
-        }
-     
-        .nav li a:hover, .nav li a:focus {
-          color: #000;
-          text-decoration: none; }
-      .nav li ul.sub-menu,
-      .nav li ul.children {
-        margin-top: 0;
-        border-top: 0;
-        position: absolute;
-        visibility: hidden;
-        border-radius:3px;
-        box-shadow:0 6px 20px rgba(0, 0, 0, 0.08);
-        z-index: 8999;
-        visibility:hidden;
-        opacity:0;
-       transition: opacity 0.2s linear, visibility 0.2s linear;
-        /* highlight sub-menu current page */ }
+#top-nav li ul.sub-menu li,
+#top-nav li ul.children li {
+  height:42px;
+  line-height:initial;
+}
+#top-nav li:hover a {
+  color:#303030;
+}
+#top-nav li ul.sub-menu li a,
+#top-nav li ul.children li a {
+  display: block;
+  width: 200px;
+  padding:10px 15px;
+  font-family:'Hind Madurai', 'Helvetica Neue', sans-serif;
+  font-weight:400;
+  color:#6d7485;
+ transition-duration: .5s;
+  transition-property: background,border-color,color,line-height;
+}
+#top-nav li ul.sub-menu li a:hover, #top-nav li ul.children li a:hover {
+  color:#39d47e;
+  transition-property: background,border-color,color,line-height;
+}
 
-        .nav li:hover ul.sub-menu, .nav li:hover ul.children {
-            visibility: visible;
-            opacity: 1;
-          }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
-          height:42px;
-          line-height:initial;
-          /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
-          */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
-            padding-left: 10px;
-            border-right: 0;
-            display: block;
-            width: 200px;
-            border-left:3px solid #FFF;
-            padding:10px 15px;
-            font-family:'Hind Madurai', 'Helvetica Neue', sans-serif;
-            font-weight:400;
-             transition-duration: .5s;
-              transition-property: background,border-color,color,line-height;}
-            .nav li ul.sub-menu li a:hover, .nav li ul.children li a:hover {
-              transition-duration: .5s;
-              color:#39d47e;
-              transition-property: background,border-color,color,line-height;
-            }
-
-            .nav li ul.children li:hover a, .nav li ul.sub-menu li:hover a {
-              border-left:3px solid #7693f4;
-              transition-duration: .5s;
-              transition-property: background,border-color,color,line-height;
-            }
-
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
-            border-bottom: 0; }
-          .nav li ul.sub-menu li ul,
-          .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
-      .nav li:hover > ul {
-        top: auto;
-        visibility: visible; }
-
-
-  /* end .nav */
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
   .sidebar {
     margin-top: 2.2em; }
 
@@ -1954,16 +1908,16 @@ be set to display none.
   display:block;
   margin-bottom:0;
   font-family:"Hind Madurai", "Helvetica Neue", sans-serif;
-  line-height:21px;
+  line-height:32px;
 
 }
 
 
-.sidenav li:last-child, #top-nav > ul > li:last-child a {
+#side-nav > ul > li:last-child a, #top-nav li:last-child a {
   color:#2fca74;
 }
-.sidenav li:last-child, .nav li:last-child:hover a {
-  color:#000;
+#side-nav > ul > li:last-child:hover a, #top-nav li:last-child:hover a {
+  color:#39d47e
 }
 .sidenav li a {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -2013,10 +1967,10 @@ be set to display none.
 
 .sidenav li > a {
     border-left:3px solid #FFF;
-   
+
 }
 .sidenav li.menu-item-has-children.active > a {
-  
+
   border-left: 3px solid #7693f4;
   transition:.3s ease;
 
@@ -2059,7 +2013,7 @@ be set to display none.
   align-items:center;
   height:100%;
 }
-#main, #header {
+#main, #header, #featured-article-section {
   transition: margin-left .5s;
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   transition-duration:0.55s;
@@ -2182,11 +2136,11 @@ section {
   transition-duration:.3s;
   -webkit-transition-timing-function:ease-in-out;
   transition-timing-function:ease-in-out;
-  height:auto;
   border-radius:3px;
   background:#FFF;
   margin-bottom:25px;
-  min-height:450px;
+  height:500px;
+  max-width:350px;
 }
 .grid-item .title, .grid-item .excerpt {
   margin-bottom:15px;
@@ -2203,6 +2157,7 @@ section {
 .grid-item .title h2 {
   margin:0;
   line-height:28px;
+  font-size:22px;
 }
 
 .grid-item .text-wrap {
@@ -2212,10 +2167,16 @@ section {
 
 .grid-item .excerpt {
   font-size:16px;
-  margin-bottom:0;
 }
 .grid-item .read-more, .article-header .read-more  {
   color:#2fca74;
+}
+.grid-item .read-more {
+  font-size:14px;
+  font-weight:500;
+  position:absolute;
+  bottom:0;
+  margin-bottom:15px;
 }
 
 .section-title-spacer {
@@ -2231,12 +2192,8 @@ section {
 }
 
 .arrow {
-  position:relative;
-  top:1px;
-}
-.home #content {
-  margin-top:0;
-  padding-top:0;
+  position: relative;
+  top: 1px;
 }
 article {
   position:relative;
@@ -2254,11 +2211,7 @@ article .entry-title {
   line-height:26px;
   font-weight:400;
 }
-article .byline {
-  color:#999;
-  margin:0;
-  font-size:14px;
-}
+
 .category p {
   margin:0;
 
@@ -2550,11 +2503,12 @@ header > div.read-more > p {
     width:89.5%;
   }
   .row {
-    flex-wrap:nowrap;
-    justify-content:space-between;
+    flex-wrap:wrap;
+    justify-content:center;
   }
   .featured-article-section .row {
     justify-content:space-between;
+    flex-wrap:nowrap;
   }
   .featured-article-section {
     height:80vh;
@@ -2562,6 +2516,10 @@ header > div.read-more > p {
   .mySidenav {
     display:none;
   }
+  .grid-item {
+    width:310px;
+  }
+
 }
 
 
@@ -2626,10 +2584,21 @@ header > div.read-more > p {
   #top-nav > ul > li > a {
     padding:0 15px;
   }
+  @media only screen and (min-width:1080px) {
+    .row {
+      flex-wrap:nowrap;
+      justify-content:space-between;
+    }
+    .grid-item {
+      width:auto;
+    }
+  }
 }
 
-@media only screen and (min-width:1150px) {
-
+@media only screen and (min-width:1270px) {
+  .grid-item {
+    min-width:370px;
+  }
 }
 
 
